@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html ng-app>
+<html>
 	<head>
 		<meta charset="utf-8">
 
@@ -15,8 +15,66 @@
 		
 		<script src="js/angular.js"></script>
 		<script src="js/main.js"></script>
+		<script type="text/javascript" src="js/KittiesController.js"></script>
 	</head>
 
-	<body>
+	<body ng-app="KittenApp">
+
+		<main ng-controller="KittenController as cats" id="container">
+
+			<section id="leftSide" class="left-container">
+				<h2>Kitties for Adoption</h2>
+				<ul>
+					  <li ng-repeat="cat in cats.kittenList | filter: false" 
+					  	  class="dashed">
+
+					  		<h3 class="name">My name is {{ cat.catName }}</h3>
+
+					  		<h4 class="age">I am {{ cat.monthsOld}} months old.</h4>
+
+					  		<h5 class="gender">I am a {{ cat.gender }}.</h5>
+
+					  		<figure>
+					  			<img src="{{ cat.image }}" />
+					  		</figure>
+
+					  		<form name="Adopt?">
+					  			<input type="checkbox" ng-class="adopt" ng-model="cat.adopted" />
+					  		</form>
+
+					  </li>	
+				</ul>
+				
+			</section>
+
+
+			<section id="rightSide" class="right-container">
+				<h2>At their forever homes &lt3</h2>
+				<ul>
+					  <li ng-repeat="cat in cats.kittenList | filter: true"
+					  	  class="dashed">
+
+					  		<h3 class="name">My name is {{ cat.catName }}</h3>
+
+					  		<h4 class="age">I am {{ cat.monthsOld}} months old.</h4>
+
+					  		<h5 class="gender">I am a {{ cat.gender }}.</h5>
+
+					  		<figure>
+					  			<img src="{{ cat.image }}" />
+					  		</figure>
+
+					  		<form name="Adopt?">
+					  			<input type="checkbox" ng-class="adopt" ng-model="cat.adopted" />
+					  		</form>
+
+					  </li>	
+				</ul>
+			</section>
+			
+
+		</main>
+
+
 	</body>
 </html>

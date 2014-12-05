@@ -1,20 +1,54 @@
 /*@import a Google Font here!*/
 
 body {
-
+	background-image: url(../images/background.png);
+	text-align: center;
 }
 
 #container {
+	text-align: center;
+	display: inline-block;
 
+}
+
+
+ul {
+	padding: 10px;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .dashed {
-
+	list-style: none;
+	border: 1px dashed #E8839E;
+	border-radius: 20px;
+	margin: 10px;
+	text-align: center;
 }
 
 .left-container, .right-container {
+	background-color: white;
+	text-align: center;
+	border: 1px solid #81D0D1;
+	border-radius: 20px;
+	margin-top: 15px;
+	margin-right: 10px;
+	margin-left: 10px;
+	width: 420px;
 
 }
+
+
+#leftSide {
+	float: left;
+}
+
+#rightSide {
+	float: right;
+}
+
 h1 {
 	
 }
+
+
