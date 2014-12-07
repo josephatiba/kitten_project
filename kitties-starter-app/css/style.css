@@ -1,8 +1,7 @@
-/*@import a Google Font here!*/
-
 body {
 	background-image: url(../images/background.png);
 	text-align: center;
+	font-family: 'Lobster', cursive;
 }
 
 #container {
@@ -21,7 +20,7 @@ ul {
 .dashed {
 	list-style: none;
 	border: 1px dashed #E8839E;
-	border-radius: 20px;
+	border-radius: 25px;
 	margin: 10px;
 	text-align: center;
 }
